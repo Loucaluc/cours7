@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public abstract class Enemi : MonoBehaviour , Damage{
+public abstract class Ennemi : MonoBehaviour , Damage{
     public int lifeTotal = 1;
     public void TakeDamage(int damage)
     {

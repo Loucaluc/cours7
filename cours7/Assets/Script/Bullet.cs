@@ -37,4 +37,15 @@ public class Bullet : MonoBehaviour {
     {
         Destroy(gameObject);
     }
+
+    public void OnTriggerEnter(Collider otherObject)
+    {
+        Damage grosDamage = otherObject.GetComponentInParent<Damage>();
+        if (grosDamage != null)
+        {
+            grosDamage.TakeDamage(bulletDamage);
+        }
+
+        Die();
+    }
 }
