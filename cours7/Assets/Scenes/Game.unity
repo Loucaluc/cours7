@@ -624,8 +624,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 1
-  ennemiPrefab: {fileID: 1064821072151746, guid: 6be5711176df2bf4c8e3eb9468fe214f,
-    type: 2}
+  ennemiPrefab:
+  - {fileID: 1064821072151746, guid: 6be5711176df2bf4c8e3eb9468fe214f, type: 2}
+  - {fileID: 1479311172883996, guid: da32e177a1307d440b674e18d653d98d, type: 2}
 --- !u!1 &1164667265
 GameObject:
   m_ObjectHideFlags: 0

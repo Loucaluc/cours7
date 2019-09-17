@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour {
     public float spawnRate = 1;
     private SpawnPoint[] spawnPoints;
-    public GameObject ennemiPrefab;
+    public GameObject[] ennemiPrefab;
     private float timeLeftBeforeSpawmn = 0;
 
 	// Use this for initialization
@@ -34,7 +34,8 @@ public class Spawner : MonoBehaviour {
     {
         int countSpawnPoint = spawnPoints.Length;
         int randomPointIndex = Random.Range(0, countSpawnPoint);
+        int randomEnnemi = Random.Range(0, ennemiPrefab.Length);
         SpawnPoint spawnPointRandomlySelected = spawnPoints[randomPointIndex];
-        GameObject newCube = Instantiate(ennemiPrefab, spawnPointRandomlySelected.GetPosition(), spawnPointRandomlySelected.transform.rotation);
+        GameObject newCube = Instantiate(ennemiPrefab[randomEnnemi], spawnPointRandomlySelected.GetPosition(), spawnPointRandomlySelected.transform.rotation);
     }
 }

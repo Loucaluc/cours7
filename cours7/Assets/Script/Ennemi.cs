@@ -4,20 +4,34 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public abstract class Ennemi : MonoBehaviour , Damage{
-    public int lifeTotal = 1;
+    private int lifeTotalEnnemi1 = 1;
+    private int lifeTotalEnnemi2 = 15;
     public void TakeDamage(int damage)
     {
-        lifeTotal -= damage;
-        if (lifeTotal <= 0)
+        if (gameObject.tag == "Ennemi1")
         {
-            Die();
+            lifeTotalEnnemi1 -= damage;
+            if (lifeTotalEnnemi1 <= 0)
+            {
+                Die();
+            }
         }
+
+        if (gameObject.tag == "Ennemi2")
+        {
+            lifeTotalEnnemi2 -= damage;
+            if (lifeTotalEnnemi2 <= 0)
+            {
+                Die();
+            }
+        }
+
     }
 
     public abstract void Die();
 
     protected void SetLife(int newlifeTotal)
     {
-        lifeTotal = newlifeTotal;
+        lifeTotalEnnemi1 = newlifeTotal;
     }
 }
