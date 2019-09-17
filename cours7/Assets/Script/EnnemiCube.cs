@@ -8,6 +8,8 @@ public class EnnemiCube : Ennemi {
     Rigidbody rb;
     AudioSource audioSource;
     public AudioMusic audioMusic;
+    public GameObject particuleSystemDeath;
+
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -28,6 +30,7 @@ public class EnnemiCube : Ennemi {
     public override void Die()
     {
         audioSource.PlayOneShot(audioMusic.soundToPlay);
+        Instantiate(particuleSystemDeath, gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

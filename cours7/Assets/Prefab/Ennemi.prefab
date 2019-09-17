@@ -156,3 +156,5 @@ MonoBehaviour:
   lifeTotal: 1
   speed: 5
   audioMusic: {fileID: 11400000, guid: a9515ec53b136bb4784c5e70fcea4870, type: 2}
+  particuleSystemDeath: {fileID: 1206371973881662, guid: c9e7151ff92741042a8e390b8cc2d9d2,
+    type: 2}
