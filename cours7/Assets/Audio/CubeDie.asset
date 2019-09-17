@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909732d93d315de4895303d98f1c241a, type: 3}
   m_Name: CubeDie
   m_EditorClassIdentifier: 
-  soundToPlay: {fileID: 8300000, guid: efe7bf386d48e4248b3875461b13d0a2, type: 3}
+  soundToPlay: {fileID: 8300000, guid: a3588cf06ad793746803429c8abc78d6, type: 3}
